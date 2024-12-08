@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    min-height: 100vh; 
+    /* Full viewport height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 125px; /* Fixed width for sidebar */
+    background-color: #763f74; /* Dark gray for sidebar */
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); 
+    color: #EAEAEA; /* Light text color */
+    padding-top: 20px; /* Top padding */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on the right */
+    border-radius: 0px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 24px;
+    color: #EAEAEA;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #EAEAEA; /* Light color for links */
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757; /* Slightly darker on hover */
+}
+
+/* Content Area Styles */
+.content {
+    flex: 1; /* Takes up remaining space */
+    padding: 20px;
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    background-size: cover; /* Make the image cover the entire element */
+    background-position: center; /* Center the background image */
+    color: #ff8000; /* Dark text color */
+}
+
+
+h1 {
+    margin-top: 0;
+}
+
+body{
+	margin: 0px;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 50px;
+    margin-top: 30px;
+}
+
+.card {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 350px;
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ff8040;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px;
+}
+
+.button-like {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    text-align: center;
+    text-decoration: none;  /* Remove underline */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-like:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+
+
+
+ 

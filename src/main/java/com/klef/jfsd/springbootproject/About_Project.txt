@@ -1,0 +1,97 @@
+project Statement:
+------------------
+
+JFSD-PS36: Develop an online platform for student health and wellness resources
+Create a web application providing access to health and wellness resources, such as mental
+health support, fitness programs, and nutrition advice. The platform should help students
+maintain their overall well-being and address health-related concerns.
+• Admin: Manage health resources, update wellness programs, track usage metrics.
+• User (Student): Access health resources, participate in wellness programs, seek support
+services.
+
+
+Roles we are going to create:
+------------------------------
+-> Student : the user who use the platform for health and wellness
+
+-> Mentor  : the user who mentor all the students using this platform and can add more programs & provide services
+
+-> Admin   : who can view all the content and details of mentors : can delete the mentor & register the mentor etc
+
+
+***********************************************************************************************************************
+
+Theme: CSS:
+------------
+Background colo: #e8e6dc;
+
+-----------------------------------------------------------------------
+
+Models:
+-------
+
+-> class name: Student
+			  ---------
+Attributes:
+
+	- sid            | (unique)
+	- sname			 |
+	- sgender        |
+	- sdateofbirth   |
+	- slocation      |           -----> these are compulsory to add when registered and can't be null
+	- semail         | (unique) 
+	- spassword      |
+	- scontact       | (unique)
+	- susernamem     | (unique)
+	
+	- scollege  |
+	- sabout    | --> these are not compulsory and can update in profile section
+	- simage    |
+	
+-------------------------------------------------------------------------------------------------------------
+
+***********************************************************************************************************************
+
+Student Services:
+-------------------
+	- public String studentRegistration(Student s);
+		to register the student with all the atributes expect simage, sabout, acollege
+		
+	- public Student checkStudentLoginByUsername(String susername,String spassword);
+		to login student with username and password
+	- public Student checkStudentLoginByEmail(String semail,String spassword);
+		to login student with email and password
+
+----------------------------------------------------------------------------------------------------
+
+Controller URL's:
+----------------------
+	- mainnavbar.jsp : for navbar before any login
+	- studentnavbar.jsp : for student login
+	
+	- ("/") -> home.jsp
+	
+	- ("studentreg") -> studentreg.jsp page for registering student
+	
+	- ("studenthome") -> studenthome.jsp page for student home page after successfull login
+	
+	- ("insertstudent") -> A post method url which insert the student data into repositoy and redirects into studentregsuccess.jsp
+	                       file which hase login link
+	
+	- ("studentlogin") -> studentlogin.jsp page for entering login credentials for login (http session is added with attribute student)
+	
+	- ("checkStudentLoginByUsername") -> A post method url to check login of student data with username in repository and redirects
+							into studenthome
+	
+	- ("checkStudentLoginByemail") -> A post method url to check login of student data with email in repository and redirects
+							into studenthome
+	
+	- ("studentlogout") -> which logouts the student and redirects lo studentlogin (session is removed)
+	
+	- ("studentsessionfail") -> redirects to studentsessionfail.jsp when there is no session 
+	
+
+**SESSION NOTE** : we have to add session in every page of student to maintain that session 
+
+
+

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+ /* General Styles */
+body {
+     
+    background-color: #ffffff; /* Background color */
+    color: #EAEAEA; /* Light text color */
+    margin: 0; 
+    padding: 0px; 
+}
+
+h3 {
+    color: #ff8000; /* Header color */
+    margin: 20px 0; 
+    text-align: center; 
+    font-size: 24px; 
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 20px rgb(0, 0, 0); 
+    transition: transform 0.2s, box-shadow 0.3s;
+    background-image: linear-gradient(to right,#ebf5f7 ,#ade2ed 100%); 
+    
+
+.form-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1.8); 
+}
+
+/* Table Styles */
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+td {
+    padding: 15px; 
+}
+
+label {
+    display: flex;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    color: rgb(10, 10, 10);
+    font-size: 15px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 4px; 
+    background-color: #ffffff; 
+    color: #0a0a0a;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: rgb(128, 128, 0); 
+    outline: none;
+}
+
+/* Button Styles */
+input[type="submit"],
+input[type="reset"] {
+    background-color: rgb(255, 128, 0);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: rgb(230, 203, 13);
+    transform: translateY(-2px);
+}
+
+.button-container {
+    text-align: center; 
+    margin-top: 10px;
+}
+
+
+textarea {
+    resize: none;
+    min-height: 100px;
+    max-height: 150px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #EAEAEA;
+}
